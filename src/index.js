@@ -13,7 +13,6 @@ const projectArray = [];
 const projectList = document.querySelector('.project-list');
 const inbox = document.querySelector('.inbox');
 const projectName = document.querySelector('#project-name');
-const main = document.querySelector('main');
 
 // Open the Project form in sidebar
 newProjectBtn.addEventListener('click', () => {
@@ -24,7 +23,7 @@ newProjectBtn.addEventListener('click', () => {
 
 // Load project page
 function loadProjectPage(e) {
-    console.log(e.target.innerText);
+    console.log(e);
     projectName.innerText = e.target.innerText;
 }
 
@@ -69,7 +68,8 @@ todoForm.addEventListener('submit', (e) => {
 
 // Load inbox 
 inbox.addEventListener('click', () => {
-    console.log(inbox.dataset.project);
     projectName.textContent = '[inbox.dataset.project]';
     projectName.innerText = 'Inbox';
 })
+
+document.addEventListener('DOMContentLoaded', projectName.innerText = 'Inbox');

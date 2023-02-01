@@ -114,8 +114,7 @@ nav h2 {
 	width: 1.5em;
 	cursor: pointer;
 	padding-top: 2em;
-	display: block;
-	margin: auto;
+    text-align:end;
 }
 
 .flex-container {
