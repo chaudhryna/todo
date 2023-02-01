@@ -11,23 +11,34 @@ const projectForm = document.querySelector('.projectForm');
 const projectFormBtn = document.querySelector('#projectFormBtn');
 const projectArray = [];
 const projectList = document.querySelector('.project-list');
+const inbox = document.querySelector('.inbox');
+const projectName = document.querySelector('#project-name');
+const main = document.querySelector('main');
 
 // Open the Project form in sidebar
 newProjectBtn.addEventListener('click', () => {
     projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
+    document.querySelector('#project-title').focus();
 });
 
+// Load project page
+function loadProjectPage(e) {
+    console.log(e.target.innerText);
+    projectName.innerText = e.target.innerText;
+}
+
+// Event listener to open form and create new project
 projectFormBtn.addEventListener('click', (e) => {
     projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
     e.preventDefault();
     let projectTitle = document.querySelector('#project-title');
     const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.innerText = projectTitle.value;
+    li.dataset.project = projectTitle.value.toLowerCase();
+    li.innerText = projectTitle.value;
     projectArray.push(projectTitle.value);
-    li.appendChild(a);
+    li.addEventListener('click', loadProjectPage);
     projectList.appendChild(li);
     projectTitle.value = '';
 });
@@ -56,3 +67,9 @@ todoForm.addEventListener('submit', (e) => {
     todoModal.close();
 });
 
+// Load inbox 
+inbox.addEventListener('click', () => {
+    console.log(inbox.dataset.project);
+    projectName.textContent = '[inbox.dataset.project]';
+    projectName.innerText = 'Inbox';
+})

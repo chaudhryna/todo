@@ -1,103 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+* {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    background: #f5f6fa;
+body {
+	background: #f5f6fa;
+}
+
+.container {
+	display: grid;
+    grid-template-areas: 
+        "nav nav nav"
+        "aside main main"
+        "aside main main";
+        grid-template-rows: 3em 1fr;
+        grid-template-columns: 20% 1fr;
 }
 
 nav {
-    background: rgb(5, 68, 104);
-    box-shadow: 0 8px 6px -6px black;
-    height: 3em;
+    grid-area: nav;
+	background: rgb(5, 68, 104);
+	box-shadow: 0 8px 6px -6px black;
 }
 
 nav h2 {
-    padding: .7em;
-    color: #fff;
+	padding: 0.7em;
+	color: #fff;
 }
 
-.sidebar{
-    background: rgb(212, 230, 241);
-    width: 15em;
-    height: 100vh;
-    padding: .5em;
+.sidebar {
+    grid-area: aside;
+	background: rgb(212, 230, 241);
+	height: 100vh;
+	padding: 1em;
 }
 
 .sidebar h3 {
-    color:  rgb(44, 62, 80);
-    padding: 0 1.5em;
-    font-size: 1rem;
+	color: rgb(44, 62, 80);
+	padding: 0 1.5em;
+	font-size: 1rem;
 }
 
 .sidebar .icon {
-    width: 1em;
+	width: 1em;
+}
+
+.inbox {
+	padding-top: 2em;
 }
 
 #newProjectBtn {
-    margin-top: 3em;
-    margin-bottom: 2em;
-    cursor: pointer;
-    border: none;
-    background: none;
+	margin-top: 3em;
+	margin-bottom: 2em;
+	cursor: pointer;
+	border: none;
+	background: none;
 }
 
 #newProjectBtn img {
-    width: 1em;
+	width: 1em;
 }
 
 #project-title {
-    padding: .4em ;
+	padding: 0.4em;
 }
 
 #projectFormBtn {
-    margin-top: .3em;
-    padding: .2em;
+	margin-top: 1em;
+	padding: 0.2em;
 }
 
 .projects {
-    margin-top: 3em;
+	margin-top: 3em;
 }
 
 .project-list {
-    margin-top: 3em;
-    border-top: 1px solid #10558d;
+	margin-top: 1em;
+	border-top: 1px solid #10558d;
 }
 
-.sidebar ul li a{
-    display: block;
-    padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
-    color: rgb(44, 62, 80);
-    font-size: 1rem;
+.sidebar ul li,
+.inbox {
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(44, 62, 80);
+	font-size: 1rem;
+	cursor: pointer;
 }
-.sidebar ul li a:hover,
-.sidebar ul li a:active{
-    color: #0c7db1;
-    background:white;
-    border-right: 2px solid rgb(5, 68, 104);
+.sidebar ul li:hover,
+.sidebar ul li:active,
+.inbox:active,
+.inbox:hover {
+	color: #0c7db1;
+	background: white;
+	border-right: 2px solid rgb(5, 68, 104);
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .show {
-  display: block;
+	display: block;
 }
 
 .openTodoForm {
-    width: 1.5em;
-    cursor: pointer;
-    padding-top: 2em;
-    display: block; 
-    margin: auto
+	width: 1.5em;
+	cursor: pointer;
+	padding-top: 2em;
+	display: block;
+	margin: auto;
 }
 
 .flex-container {
@@ -108,14 +126,14 @@ nav h2 {
 }
 
 .todoModal {
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3);
-    margin: auto;
+	border: none;
+	border-radius: 6px;
+	box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+	margin: auto;
 }
 
 .todoModal::backdrop {
-    background-color: rgb(0 0 0 / .3);
+	background-color: rgb(0 0 0 / 0.3);
 }
 
 #todo-form {
@@ -136,25 +154,32 @@ nav h2 {
 	flex-wrap: wrap;
 }
 
-#todo-form input, 
+#todo-form input,
 #todo-form select {
 	width: 20em;
 	padding: 8px;
 	border-radius: 4px;
-	border: 1px solid #E5E7EB;
+	border: 1px solid #e5e7eb;
 }
 
 #todo-form label {
 	color: gray;
-	margin-bottom: .5em;
+	margin-bottom: 0.5em;
 }
 
 #todo-form button {
 	font-size: 1.1rem;
-    background-color: rgb(5, 68, 104);
-    color: #fff;
+	background-color: rgb(5, 68, 104);
+	color: #fff;
 	padding: 0.5em;
 	border: none;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	border-radius: 8px;
 }
+
+main {
+    grid-area: main;
+	background: #eaeaea;
+    padding: 3em 2em;
+}
+
