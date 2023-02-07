@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-<script defer src="bundlec41e480721e59514ea51.js"></script></head>
+<script defer src="bundlefe23f9b0bd2f98236c05.js"></script></head>
 <body>
     <div class="container">
         <nav>
@@ -13,6 +13,7 @@
         </nav>
         <aside class="sidebar">
             <div>
+                <img src="./inbox.svg" id="inboxImg" />
                 <h4 data-project="inbox" class="inbox">Inbox</h4>
             </div>
             <button id="newProjectBtn">
@@ -26,7 +27,7 @@
 
 
             <div class="projects">
-                <h3><span class="icon"><img src="./folder.svg" class="icon"></span>   Projects</h3>
+                <h3><span><img src="./folder.svg" class="icon"></span>   Projects</h3>
                 <ul class="project-list">
                 </ul>
             </div>
@@ -35,8 +36,21 @@
         <main>
             <h1 id="project-name"></h1>
 
-            <img src="./add-solid.svg" title="Add a Todo" class="openTodoForm">
-            <span>Add a new Todo</span>
+            <table class="todoTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list"></tbody>
+            </table>
+            <div>
+                <img src="./add-solid.svg" title="Add a Todo" class="openTodoForm">
+                <span>Add a new Todo</span>
+            </div>
         </main>
 
         <dialog class="todoModal">
