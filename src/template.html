@@ -12,8 +12,9 @@
             <h2>Todo App</h2>
         </nav>
         <aside class="sidebar">
-            <div>
-                <h4 data-project="inbox" class="inbox">Inbox</h4>
+            <div class="inbox">
+                <img src="./inbox.svg" id="inboxImg" />
+                <h2 data-project="inbox">Inbox</h2>
             </div>
             <button id="newProjectBtn">
                 <img src="./add-solid.svg" /> 
@@ -26,7 +27,7 @@
 
 
             <div class="projects">
-                <h3><span class="icon"><img src="./folder.svg" class="icon"></span>   Projects</h3>
+                <h3><span><img src="./folder.svg" class="icon"></span>   Projects</h3>
                 <ul class="project-list">
                 </ul>
             </div>
@@ -35,20 +36,22 @@
         <main>
             <h1 id="project-name"></h1>
 
-            <img src="./add-solid.svg" title="Add a Todo" class="openTodoForm">
-            <span>Add a new Todo</span>
-
             <table class="todoTable">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Due Date</th>
-                    <th>Priority</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="todo-list"></tbody>
-        </table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list"></tbody>
+            </table>
+            <div>
+                <img src="./add-solid.svg" title="Add a Todo" class="openTodoForm">
+                <span>Add a new Todo</span>
+            </div>
         </main>
 
         <dialog class="todoModal">

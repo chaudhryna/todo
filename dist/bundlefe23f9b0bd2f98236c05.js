@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n    grid-template-areas: \n        \"nav nav nav\"\n        \"aside main main\"\n        \"aside main main\";\n        grid-template-rows: 3em 1fr;\n        grid-template-columns: 20% 1fr;\n}\n\nnav {\n    grid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n    grid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1em;\n}\n\n.inbox {\n\tpadding-top: 2em;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n    text-align:end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n    grid-area: main;\n\tbackground: #eaeaea;\n    padding: 3em 2em;\n}\n\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;CACC,qBAAqB;CACrB,SAAS;CACT,UAAU;CACV,sBAAsB;CACtB,oCAAoC;AACrC;;AAEA;CACC,mBAAmB;AACpB;;AAEA;CACC,aAAa;IACV;;;yBAGqB;QACjB,2BAA2B;QAC3B,8BAA8B;AACtC;;AAEA;IACI,cAAc;CACjB,2BAA2B;CAC3B,gCAAgC;AACjC;;AAEA;CACC,cAAc;CACd,WAAW;AACZ;;AAEA;IACI,gBAAgB;CACnB,8BAA8B;CAC9B,aAAa;CACb,YAAY;AACb;;AAEA;CACC,sBAAsB;CACtB,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,gBAAgB;AACjB;;AAEA;CACC,eAAe;CACf,kBAAkB;CAClB,eAAe;CACf,YAAY;CACZ,gBAAgB;AACjB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,eAAe;CACf,cAAc;AACf;;AAEA;CACC,eAAe;AAChB;;AAEA;CACC,eAAe;CACf,6BAA6B;AAC9B;;AAEA;;CAEC,cAAc;CACd,kBAAkB;CAClB,gCAAgC;CAChC,sBAAsB;CACtB,eAAe;CACf,eAAe;AAChB;AACA;;;;CAIC,cAAc;CACd,iBAAiB;CACjB,uCAAuC;AACxC;;AAEA;CACC,aAAa;AACd;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,YAAY;CACZ,eAAe;CACf,gBAAgB;IACb,cAAc;AAClB;;AAEA;CACC,aAAa;CACb,sBAAsB;CACtB,eAAe;CACf,QAAQ;AACT;;AAEA;CACC,YAAY;CACZ,kBAAkB;CAClB,oCAAoC;CACpC,YAAY;AACb;;AAEA;CACC,kCAAkC;AACnC;;AAEA;CACC,sBAAsB;CACtB,WAAW;CACX,gBAAgB;AACjB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,mBAAmB;CACnB,aAAa;CACb,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;AAChB;;AAEA;;CAEC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,WAAW;CACX,oBAAoB;AACrB;;AAEA;CACC,iBAAiB;CACjB,iCAAiC;CACjC,WAAW;CACX,cAAc;CACd,YAAY;CACZ,uCAAuC;CACvC,kBAAkB;AACnB;;AAEA;IACI,eAAe;CAClB,mBAAmB;IAChB,gBAAgB;AACpB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n    grid-template-areas: \n        \"nav nav nav\"\n        \"aside main main\"\n        \"aside main main\";\n        grid-template-rows: 3em 1fr;\n        grid-template-columns: 20% 1fr;\n}\n\nnav {\n    grid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n    grid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1em;\n}\n\n.inbox {\n\tpadding-top: 2em;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n    text-align:end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n    grid-area: main;\n\tbackground: #eaeaea;\n    padding: 3em 2em;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n    grid-template-areas: \n        \"nav nav nav\"\n        \"aside main main\"\n        \"aside main main\";\n        grid-template-rows: 3em 1fr;\n        grid-template-columns: 20% 1fr;\n}\n\nnav {\n    grid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n    grid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 2em;\n}\n\n#inboxImg {\n\twidth: 1.2em;\n\ttext-align:end;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n    text-align:end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n    grid-area: main;\n\tbackground: #eaeaea;\n    padding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content:flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;CACC,qBAAqB;CACrB,SAAS;CACT,UAAU;CACV,sBAAsB;CACtB,oCAAoC;AACrC;;AAEA;CACC,mBAAmB;AACpB;;AAEA;CACC,aAAa;IACV;;;yBAGqB;QACjB,2BAA2B;QAC3B,8BAA8B;AACtC;;AAEA;IACI,cAAc;CACjB,2BAA2B;CAC3B,gCAAgC;AACjC;;AAEA;CACC,cAAc;CACd,WAAW;AACZ;;AAEA;IACI,gBAAgB;CACnB,8BAA8B;CAC9B,aAAa;CACb,YAAY;AACb;;AAEA;CACC,sBAAsB;CACtB,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,gBAAgB;AACjB;;AAEA;CACC,YAAY;CACZ,cAAc;AACf;;AAEA;CACC,eAAe;CACf,kBAAkB;CAClB,eAAe;CACf,YAAY;CACZ,gBAAgB;AACjB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,eAAe;CACf,cAAc;AACf;;AAEA;CACC,eAAe;AAChB;;AAEA;CACC,eAAe;CACf,6BAA6B;AAC9B;;AAEA;;CAEC,cAAc;CACd,kBAAkB;CAClB,gCAAgC;CAChC,sBAAsB;CACtB,eAAe;CACf,eAAe;AAChB;AACA;;;;CAIC,cAAc;CACd,iBAAiB;CACjB,uCAAuC;AACxC;;AAEA;CACC,aAAa;AACd;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,YAAY;CACZ,eAAe;CACf,gBAAgB;IACb,cAAc;AAClB;;AAEA;CACC,aAAa;CACb,sBAAsB;CACtB,eAAe;CACf,QAAQ;AACT;;AAEA;CACC,YAAY;CACZ,kBAAkB;CAClB,oCAAoC;CACpC,YAAY;AACb;;AAEA;CACC,kCAAkC;AACnC;;AAEA;CACC,sBAAsB;CACtB,WAAW;CACX,gBAAgB;AACjB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,mBAAmB;CACnB,aAAa;CACb,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;AAChB;;AAEA;;CAEC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,WAAW;CACX,oBAAoB;AACrB;;AAEA;CACC,iBAAiB;CACjB,iCAAiC;CACjC,WAAW;CACX,cAAc;CACd,YAAY;CACZ,uCAAuC;CACvC,kBAAkB;AACnB;;AAEA;IACI,eAAe;CAClB,mBAAmB;IAChB,gBAAgB;CACnB,aAAa;CACb,sBAAsB;CACtB,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n    grid-template-areas: \n        \"nav nav nav\"\n        \"aside main main\"\n        \"aside main main\";\n        grid-template-rows: 3em 1fr;\n        grid-template-columns: 20% 1fr;\n}\n\nnav {\n    grid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n    grid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 2em;\n}\n\n#inboxImg {\n\twidth: 1.2em;\n\ttext-align:end;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n    text-align:end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n    grid-area: main;\n\tbackground: #eaeaea;\n    padding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content:flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -508,6 +508,47 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/Local.js":
+/*!**********************!*\
+  !*** ./src/Local.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Local class (to access localstorage)
+class Local {
+	static getTodos() {
+		let todos;
+		if (localStorage.getItem('todos') === null) {
+			todos = [];
+		} else {
+			todos = JSON.parse(localStorage.getItem('todos'));
+		}
+		return todos;
+	}
+	static addTodo(todo) {
+		const todos = Local.getTodos();
+		todos.push(todo);
+		localStorage.setItem('todos', JSON.stringify(todos));
+	}
+	// static removeTodo(id) {
+	// 	const todos = Local.getTodos();
+	// 	todos.forEach((todo, index) => {
+	// 		if (todo.id === id) {
+	// 			todos.splice(index, 1);
+	// 		}
+	// 	});
+	// 	localStorage.setItem('todos', JSON.stringify(todos));
+	// }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Local);
+
+/***/ }),
+
 /***/ "./src/Todo.js":
 /*!*********************!*\
   !*** ./src/Todo.js ***!
@@ -521,27 +562,83 @@ __webpack_require__.r(__webpack_exports__);
 class Todo {
 	constructor(title, description, dueDate, priority, completed) 
 		{
-		this.title = title
-		this.description = description
-		this.dueDate = dueDate
-		this.priority = priority
-		this.completed = completed
+		this.title = title;
+		this.description = description;
+		this.dueDate = dueDate;
+		this.priority = priority;
+		this.completed = completed;
 		}
-	static addTodo() {
-  		console.log(this.title)
-	}
-	static editTodo() {
-		console.log(`Entered edit for ${title}.`)
-	}
-	static markComplete() {
-		console.log(`Completed ${title}.`)
-	}
-	static deleteTodo = function() {
-		console.log(`Deleted ${title}.`)
-	}
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Todo);
 
+
+/***/ }),
+
+/***/ "./src/UI.js":
+/*!*******************!*\
+  !*** ./src/UI.js ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
+/* harmony import */ var _assets_trash_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/trash.svg */ "./src/assets/trash.svg");
+/* harmony import */ var _assets_pencil_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/pencil.svg */ "./src/assets/pencil.svg");
+
+
+
+
+// UI class
+class UI {
+	static displayTodos() {
+		const todos = _Local__WEBPACK_IMPORTED_MODULE_0__["default"].getTodos();
+        
+		todos.forEach((todo) => UI.addTodoToList(todo))
+	}
+
+	static addTodoToList(todo) {
+		const todoList = document.querySelector('#todo-list');
+		const row = document.createElement('tr');
+		
+		row.innerHTML = `
+            <td>${todo.title}</td>
+            <td>${todo.dueDate}</td>
+            <td>${todo.priority}</td>
+			<td><img src="./trash.svg" class="icon btn delete" title="Delete" id="deleteBtn" /></td>
+			<td><img src="./pencil.svg" class="icon btn edit" title="Edit" id="editBtn" />
+			</td>`; 
+
+		todoList.appendChild(row);
+	}
+
+	static deleteTodo(el) {
+		if (el.classList.contains('delete')) {
+			el.parentElement.parentElement.remove();
+		}
+	}
+
+	// static showAlert(message, className) {
+	// 	const div = document.createElement('div');
+	// 	div.className = `alert alert-${className}`;
+	// 	div.appendChild(document.createTextNode(message));
+	// 	const container = document.querySelector('.container');
+	// 	const form = document.querySelector('#book-form');
+	// 	container.insertBefore(div, form);
+	// 	// Remove alert after 3 seconds
+	// 	setTimeout(() => document.querySelector('.alert').remove(), 3000);
+	// }
+
+	static clearFields() {
+		document.querySelector('#title').value = '';
+		document.querySelector('#description').value = '';
+		document.querySelector('#dueDate').value = '';
+	}
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UI);
 
 /***/ }),
 
@@ -562,6 +659,36 @@ module.exports = __webpack_require__.p + "add-solid.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "folder.svg";
+
+/***/ }),
+
+/***/ "./src/assets/inbox.svg":
+/*!******************************!*\
+  !*** ./src/assets/inbox.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "inbox.svg";
+
+/***/ }),
+
+/***/ "./src/assets/pencil.svg":
+/*!*******************************!*\
+  !*** ./src/assets/pencil.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "pencil.svg";
+
+/***/ }),
+
+/***/ "./src/assets/trash.svg":
+/*!******************************!*\
+  !*** ./src/assets/trash.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "trash.svg";
 
 /***/ })
 
@@ -679,86 +806,124 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
 /* harmony import */ var _Todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Todo */ "./src/Todo.js");
-/* harmony import */ var _assets_add_solid_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/add-solid.svg */ "./src/assets/add-solid.svg");
-/* harmony import */ var _assets_folder_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/folder.svg */ "./src/assets/folder.svg");
+/* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
+/* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UI */ "./src/UI.js");
+/* harmony import */ var _assets_add_solid_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/add-solid.svg */ "./src/assets/add-solid.svg");
+/* harmony import */ var _assets_folder_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/folder.svg */ "./src/assets/folder.svg");
+/* harmony import */ var _assets_trash_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/trash.svg */ "./src/assets/trash.svg");
+/* harmony import */ var _assets_pencil_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/pencil.svg */ "./src/assets/pencil.svg");
+/* harmony import */ var _assets_inbox_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/inbox.svg */ "./src/assets/inbox.svg");
 
 
 
 
 
-const openTodoForm = document.querySelector('.openTodoForm');
-const todoModal = document.querySelector('.todoModal');
-const todoForm = document.querySelector('#todo-form');
+
+
+
+
+
+
+const inbox = document.querySelector('.inbox');
+const projectName = document.querySelector('#project-name');
 const newProjectBtn = document.querySelector('#newProjectBtn');
 const projectForm = document.querySelector('.projectForm');
 const projectFormBtn = document.querySelector('#projectFormBtn');
 const projectArray = [];
 const projectList = document.querySelector('.project-list');
-const inbox = document.querySelector('.inbox');
-const projectName = document.querySelector('#project-name');
-const main = document.querySelector('main');
+const openTodoForm = document.querySelector('.openTodoForm');
+const todoModal = document.querySelector('.todoModal');
+
 
 // Open the Project form in sidebar
 newProjectBtn.addEventListener('click', () => {
-    projectForm.classList.toggle('hide');
+	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
-    document.querySelector('#project-title').focus();
+	document.querySelector('#project-title').focus();
 });
+
+// Load inbox
+inbox.addEventListener('click', () => {
+	// projectName.textContent = '[inbox.dataset.project]';
+	projectName.innerText = 'All Todos';
+});
+
 
 // Load project page
 function loadProjectPage(e) {
-    console.log(e);
-    projectName.innerText = e.target.innerText;
+	console.log(e);
+	projectName.innerText = e.target.innerText;
 }
 
 // Event listener to open form and create new project
 projectFormBtn.addEventListener('click', (e) => {
-    projectForm.classList.toggle('hide');
+	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
-    e.preventDefault();
-    let projectTitle = document.querySelector('#project-title');
-    const li = document.createElement('li');
-    li.dataset.project = projectTitle.value.toLowerCase();
-    li.innerText = projectTitle.value;
-    projectArray.push(projectTitle.value);
-    li.addEventListener('click', loadProjectPage);
-    projectList.appendChild(li);
-    projectTitle.value = '';
+	e.preventDefault();
+	let projectTitle = document.querySelector('#project-title');
+	const li = document.createElement('li');
+	li.dataset.project = projectTitle.value.toLowerCase();
+	li.innerText = projectTitle.value;
+	projectArray.push(projectTitle.value);
+	li.addEventListener('click', loadProjectPage);
+	projectList.appendChild(li);
+	projectTitle.value = '';
 });
 
 openTodoForm.addEventListener('click', () => {
 	todoModal.showModal();
 });
 
-// Event listener for Todo form
-todoForm.addEventListener('submit', (e) => {
+// Event: Display book
+document.addEventListener('DOMContentLoaded', _UI__WEBPACK_IMPORTED_MODULE_3__["default"].displayTodos)
+
+// Event: Add todo
+document.querySelector('#todo-form').addEventListener('submit', (e) => {
     e.preventDefault();
     
     const title = document.querySelector('#title').value;
     const description = document.querySelector('#description').value;
+    const dueDate = document.querySelector('#dueDate').value;
     const priority = document.querySelector('#priority').value;
     const completed = false;
-    
-    const todo = new _Todo__WEBPACK_IMPORTED_MODULE_1__["default"](
-        title,
-        description,
-        dueDate,
-        priority,
-        completed,
-    );
-    console.log(todo);
-    todoModal.close();
-});
 
-// Load inbox 
-inbox.addEventListener('click', () => {
-    projectName.textContent = '[inbox.dataset.project]';
-    projectName.innerText = 'Inbox';
+    // Validate
+    if (title === '') {
+        // UI.showAlert('Please fill in all fields', 'danger');
+    } else {
+		// Make a new todo
+		const todo = new _Todo__WEBPACK_IMPORTED_MODULE_1__["default"](title, description, dueDate, priority, completed);
+
+		// Add todo to list
+		_UI__WEBPACK_IMPORTED_MODULE_3__["default"].addTodoToList(todo);
+
+        // Add todo to localstorage
+        _Local__WEBPACK_IMPORTED_MODULE_2__["default"].addTodo(todo);
+
+        // // Show success message
+        // UI.showAlert('Book Added', 'success')
+
+		// Clear fields
+		_UI__WEBPACK_IMPORTED_MODULE_3__["default"].clearFields();
+		todoModal.close();
+	}
 })
 
-document.addEventListener('DOMContentLoaded', projectName.innerText = 'Inbox');
+// Event: Remove book
+document.querySelector('#todo-list').addEventListener('click', (e) => {
+	// Remove todo from page
+    _UI__WEBPACK_IMPORTED_MODULE_3__["default"].deleteTodo(e.target);
+
+    // Remove todo from store
+    console.log(e.target.parentElement.previousElementSibling.textContent);
+    _Local__WEBPACK_IMPORTED_MODULE_2__["default"].removeTodo(e.target.parentElement.previousElementSibling.textContent)
+
+	// // Show success message
+	// UI.showAlert('Book Removed', 'success');
+})
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlec41e480721e59514ea51.js.map
+//# sourceMappingURL=bundlefe23f9b0bd2f98236c05.js.map

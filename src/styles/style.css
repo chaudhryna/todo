@@ -14,16 +14,16 @@ body {
 
 .container {
 	display: grid;
-    grid-template-areas: 
-        "nav nav nav"
-        "aside main main"
-        "aside main main";
-        grid-template-rows: 3em 1fr;
-        grid-template-columns: 20% 1fr;
+	grid-template-areas:
+		'nav nav nav'
+		'aside main main'
+		'aside main main';
+	grid-template-rows: 3em 1fr;
+	grid-template-columns: 20% 1fr;
 }
 
 nav {
-    grid-area: nav;
+	grid-area: nav;
 	background: rgb(5, 68, 104);
 	box-shadow: 0 8px 6px -6px black;
 }
@@ -34,7 +34,7 @@ nav h2 {
 }
 
 .sidebar {
-    grid-area: aside;
+	grid-area: aside;
 	background: rgb(212, 230, 241);
 	height: 100vh;
 	padding: 1em;
@@ -47,11 +47,23 @@ nav h2 {
 }
 
 .sidebar .icon {
-	width: 1em;
+	width: 1.2em;
 }
 
 .inbox {
-	padding-top: 2em;
+	padding-top: 5em;
+}
+
+.inbox h2 {
+	display: inline-block;
+	text-align: middle;
+	margin-left: .5em;
+}
+
+#inboxImg {
+	width: 2em;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #newProjectBtn {
@@ -114,7 +126,7 @@ nav h2 {
 	width: 1.5em;
 	cursor: pointer;
 	padding-top: 2em;
-    text-align:end;
+	text-align: end;
 }
 
 .flex-container {
@@ -177,8 +189,50 @@ nav h2 {
 }
 
 main {
-    grid-area: main;
+	grid-area: main;
 	background: #eaeaea;
-    padding: 3em 2em;
+	padding: 3em 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
+main h1 {
+	margin-bottom: 2em;
+}
+
+#deleteBtn {
+	width: 1.2em;
+	cursor: pointer;
+}
+
+#editBtn {
+	width: 1.2em;
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+	background-color: rgb(202, 232, 241);
+}
+
+tr:nth-child(odd) {
+	background-color: rgb(5, 68, 104);
+	color: white;
+}
+
+th {
+	background-color: #ab7c94;
+	color: white;
+}
