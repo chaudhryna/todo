@@ -2,11 +2,13 @@ import './styles/style.css';
 import Todo from './Todo';
 import Local from './Local';
 import UI from './UI';
-// import addIcon from './assets/add-solid.svg';
-// import projectIcon from './assets/folder.svg';
-// import trash from './assets/trash.svg';
-// import pencil from './assets/pencil.svg';
-// import inboxImg from './assets/inbox.svg';
+import { v4 as uuidv4 } from 'uuid';
+
+import addIcon from './assets/add-solid.svg';
+import projectIcon from './assets/folder.svg';
+import trash from './assets/trash.svg';
+import pencil from './assets/pencil.svg';
+import inboxImg from './assets/inbox.svg';
 
 
 const inbox = document.querySelector('.inbox');
@@ -18,7 +20,6 @@ const projectArray = [];
 const projectList = document.querySelector('.project-list');
 const openTodoForm = document.querySelector('.openTodoForm');
 const todoModal = document.querySelector('.todoModal');
-
 
 // Open the Project form in sidebar
 newProjectBtn.addEventListener('click', () => {
@@ -59,7 +60,7 @@ openTodoForm.addEventListener('click', () => {
 	todoModal.showModal();
 });
 
-// Event: Display book
+// Event: Display all todos
 document.addEventListener('DOMContentLoaded', UI.displayTodos)
 
 // Event: Add todo
@@ -71,37 +72,32 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
     const dueDate = document.querySelector('#dueDate').value;
     const priority = document.querySelector('#priority').value;
     const completed = false;
+		const todoId = uuidv4();
 
     // Validate
     if (title === '') {
         // UI.showAlert('Please fill in all fields', 'danger');
     } else {
-		// Make a new todo
-		const todo = new Todo(title, description, dueDate, priority, completed);
+			// Make a new todo
+			const todo = new Todo(title, description, dueDate, priority, completed, todoId);
 
-		// Add todo to list
-		UI.addTodoToList(todo);
+			// Add todo to list
+			UI.addTodoToList(todo);
 
-        // Add todo to localstorage
-        Local.addTodo(todo);
+			// Add todo to localstorage
+			Local.addTodo(todo);
 
-        // // Show success message
-        // UI.showAlert('Todo Added', 'success')
+			// // Show success message
+			// UI.showAlert('Todo Added', 'success')
 
-		// Clear fields
-		UI.clearFields();
-		todoModal.close();
+			// Clear fields
+			UI.clearFields();
+			todoModal.close();
 	}
 })
 
-// Event: Remove todo
-document.querySelector('#todo-list').addEventListener('click', (e) => {
-	// Remove todo from page
-    UI.deleteTodo(e.target);
-
-    // Remove todo from store
-    Local.removeTodo(e.target.parentElement.previousElementSibling.textContent)
-
-	// // Show success message
-	// UI.showAlert('Todo Removed', 'success');
+// Cancel button
+document.querySelector('.cancel-btn').addEventListener('click', () => {
+	UI.clearFields();
+	todoModal.close();
 })

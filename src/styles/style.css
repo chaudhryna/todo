@@ -56,7 +56,7 @@ nav h2 {
 
 .inbox h2 {
 	display: inline-block;
-	text-align: middle;
+	/* text-align: middle; */
 	margin-left: .5em;
 }
 

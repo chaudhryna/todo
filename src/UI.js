@@ -1,5 +1,6 @@
 import Local from "./Local";
 
+
 // UI class
 class UI {
 	static displayTodos() {
@@ -15,18 +16,37 @@ class UI {
 		row.innerHTML = `
             <td>${todo.title}</td>
             <td>${todo.dueDate}</td>
-            <td>${todo.priority}</td>
-			<td><img src="./trash.svg" class="icon btn delete" title="Delete" id="deleteBtn" /></td>
-			<td><img src="./pencil.svg" class="icon btn edit" title="Edit" id="editBtn" />
-			</td>`; 
-
+            <td>${todo.priority}</td>`;
+			const deleteBtn = document.createElement('td');
+			deleteBtn.id = todo.todoId;
+			const trashCan = document.createElement('img');
+			trashCan.src = './trash.svg';
+			trashCan.setAttribute('id', 'deleteBtn');
+			trashCan.classList.add('delete');
+			trashCan.addEventListener('click', UI.deleteTodo);
+			deleteBtn.appendChild(trashCan);
+			row.appendChild(deleteBtn);
+			
+			const editBtn = document.createElement('td');
+			const pencil = document.createElement('img');
+			pencil.src = './pencil.svg';
+			pencil.setAttribute('id', 'editBtn');
+			pencil.classList.add('edit');
+			pencil.addEventListener('click', UI.editTodo);
+			editBtn.appendChild(pencil);
+			row.appendChild(editBtn); 
+		
 		todoList.appendChild(row);
 	}
 
-	static deleteTodo(el) {
-		if (el.classList.contains('delete')) {
-			el.parentElement.parentElement.remove();
-		}
+	static deleteTodo(e) {
+		Local.deleteTodo(e.target.parentElement.id);
+		
+		e.target.parentElement.parentElement.remove();
+	}
+
+	static editTodo(e) {
+		console.log(`From the UI file ${e.target}`);
 	}
 
 	// static showAlert(message, className) {

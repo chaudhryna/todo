@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-<script defer src="bundlefe23f9b0bd2f98236c05.js"></script></head>
+<script defer src="bundle7e7a797dd127dd991c69.js"></script></head>
 <body>
     <div class="container">
         <nav>
             <h2>Todo App</h2>
         </nav>
         <aside class="sidebar">
-            <div>
+            <div class="inbox">
                 <img src="./inbox.svg" id="inboxImg" />
-                <h4 data-project="inbox" class="inbox">Inbox</h4>
+                <h2 data-project="inbox">Inbox</h2>
             </div>
             <button id="newProjectBtn">
                 <img src="./add-solid.svg" /> 
@@ -42,7 +42,8 @@
                         <th>Title</th>
                         <th>Due Date</th>
                         <th>Priority</th>
-                        <th></th>
+                        <th>Delete</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody id="todo-list"></tbody>
@@ -79,6 +80,7 @@
                     </div>
                 </div>
                 <button type="submit" id="add-todo" class="add-todo modal-btn">Add Todo</button>
+                <button type="button" class="cancel-btn">Cancel</button>
             </form>
         </dialog> 
     </div>
