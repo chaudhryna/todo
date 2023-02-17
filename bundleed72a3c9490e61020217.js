@@ -694,6 +694,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UI */ "./src/UI.js");
+
+
 // Local class (to access localstorage)
 class Local {
 	static getTodos() {
@@ -710,20 +713,37 @@ class Local {
 		todos.push(todo);
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
-	static editTodo(e) {
-		console.log(`From the Local file! ${e.target}`)
-	}
-	static deleteTodo(todo) {
-		console.log(`${todo.todoId}`);
-	// 	const todos = Local.getTodos();
-	// 	todos.forEach((todo, index) => {
-	// 		// if (todo.id === id) {
-	// 		// 	todos.splice(index, 1);
-	// 		// }
+	static editTodo(todoId) {
+		const todos = Local.getTodos();
 
-	// 	});
-	// 	localStorage.setItem('todos', JSON.stringify(todos));
-	// }
+		todos.forEach((todo, index) => {
+			if (todo.todoId === todoId) {
+				todo.isEditing = true;
+				localStorage.setItem('todos', JSON.stringify(todos));
+			}
+		})
+	}
+	static deleteTodo(id) {
+		const todos = Local.getTodos();
+		todos.forEach((todo, index) => {
+			if (todo.todoId === id) {
+				todos.splice(index, 1);
+			}
+		});
+		localStorage.setItem('todos', JSON.stringify(todos));
+	}
+	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate) {
+		const todos = Local.getTodos();
+		todos.forEach((todo, index) => {
+			if (todo.todoId === todoId) {
+				todo.title = newTitle;
+				todo.description = newDescription;
+				todo.priority = newPriority;
+				todo.dueDate = newDueDate;
+				todo.isEditing = false;
+			}
+		})
+		Local.addTodo(todo);
 	}
 }
 
@@ -770,7 +790,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
 
 
-
 // UI class
 class UI {
 	static displayTodos() {
@@ -783,10 +802,49 @@ class UI {
 		const todoList = document.querySelector('#todo-list');
 		const row = document.createElement('tr');
 		
-		row.innerHTML = `
-            <td>${todo.title}</td>
-            <td>${todo.dueDate}</td>
-            <td>${todo.priority}</td>`;
+		if (todo.isEditing === true) {
+			const titleField = document.createElement('input');
+			titleField.dataset.title = todo.todoId;
+			titleField.type = 'text';
+			titleField.value = todo.title;
+			row.appendChild(titleField);
+			const descriptionField = document.createElement('input');
+			descriptionField.type = 'text';
+			descriptionField.dataset.description = todo.todoId;
+			descriptionField.value = todo.description;
+			row.appendChild(descriptionField);
+			const dueDateField = document.createElement('input');
+			dueDateField.type = 'date';
+			dueDateField.dataset.dueDate = todo.todoId;
+			dueDateField.value = todo.dueDate;
+			row.appendChild(dueDateField);
+			const prioritySelect = document.createElement('select');
+			prioritySelect.dataset.priority = todo.todoId;
+			const highOption = document.createElement('option');
+			highOption.value = 'high';
+			highOption.innerText = 'High';
+			const mediumOption = document.createElement('option');
+			mediumOption.value = 'medium';
+			mediumOption.innerText = 'Medium';
+			const lowOption = document.createElement('option');
+			lowOption.value = 'low';
+			lowOption.innerText = 'Low';
+			prioritySelect.appendChild(highOption);
+			prioritySelect.appendChild(mediumOption);
+			prioritySelect.appendChild(lowOption);
+			row.appendChild(prioritySelect);
+			const updateBtn = document.createElement('button');
+			updateBtn.setAttribute('id', 'updateBtn');
+			updateBtn.dataset.todoId = todo.todoId;
+			updateBtn.innerText = 'Update';
+			updateBtn.addEventListener('click', UI.updateTodo);
+			row.appendChild(updateBtn);
+			todoList.appendChild(row);
+		} else {
+			row.innerHTML = `
+							<td>${todo.title}</td>
+							<td>${todo.dueDate}</td>
+							<td>${todo.priority}</td>`;
 			const deleteBtn = document.createElement('td');
 			deleteBtn.id = todo.todoId;
 			const trashCan = document.createElement('img');
@@ -801,22 +859,46 @@ class UI {
 			const pencil = document.createElement('img');
 			pencil.src = './pencil.svg';
 			pencil.setAttribute('id', 'editBtn');
+			pencil.dataset.todoId = todo.todoId;
 			pencil.classList.add('edit');
 			pencil.addEventListener('click', UI.editTodo);
 			editBtn.appendChild(pencil);
 			row.appendChild(editBtn); 
 		
-		todoList.appendChild(row);
-	}
+			todoList.appendChild(row);
+			}
+		}
 
 	static deleteTodo(e) {
-		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].deleteTodo(e);
-		console.log(e.target)
+		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].deleteTodo(e.target.parentElement.id);
+		
 		e.target.parentElement.parentElement.remove();
 	}
 
+	static updateTodo(e) {
+		const updateBtn = e.target;
+		const todoId = updateBtn.dataset.todoId;
+		const titleField = document.querySelector(`[data-title='${todoId}']`);
+		const newTitle = titleField.value;
+
+		const descriptionField = document.querySelector(`[data-description='${todoId}']`);
+		const newDescription = descriptionField.value;
+
+		const priorityField = document.querySelector(`[data-priority='${todoId}']`);
+		const newPriority = priorityField.value;
+
+		const dueDateField = document.querySelector(`[data-dueDate='${todoId}']`);
+		const newDueDate = dueDateField.value;
+
+		updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
+		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
+		UI.displayTodos();
+	}
+
 	static editTodo(e) {
-		console.log(`From the UI file ${e.target}`);
+		const editBtn = e.target;
+		const todoId = editBtn.dataset.todoId;
+		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].editTodo(todoId);
 	}
 
 	// static showAlert(message, className) {
@@ -848,6 +930,16 @@ class UI {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "add-solid.svg";
+
+/***/ }),
+
+/***/ "./src/assets/favicon.png":
+/*!********************************!*\
+  !*** ./src/assets/favicon.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "favicon.png";
 
 /***/ }),
 
@@ -1007,12 +1099,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Todo */ "./src/Todo.js");
 /* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
 /* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UI */ "./src/UI.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 /* harmony import */ var _assets_add_solid_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/add-solid.svg */ "./src/assets/add-solid.svg");
 /* harmony import */ var _assets_folder_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/folder.svg */ "./src/assets/folder.svg");
 /* harmony import */ var _assets_trash_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/trash.svg */ "./src/assets/trash.svg");
 /* harmony import */ var _assets_pencil_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/pencil.svg */ "./src/assets/pencil.svg");
 /* harmony import */ var _assets_inbox_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/inbox.svg */ "./src/assets/inbox.svg");
+/* harmony import */ var _assets_favicon_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/favicon.png */ "./src/assets/favicon.png");
+
 
 
 
@@ -1056,7 +1150,7 @@ function loadProjectPage(e) {
 	projectName.innerText = e.target.innerText;
 }
 
-// Event listener to open form and create new project
+// Event listener to open project form and create new project
 projectFormBtn.addEventListener('click', (e) => {
 	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
@@ -1087,7 +1181,7 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
     const dueDate = document.querySelector('#dueDate').value;
     const priority = document.querySelector('#priority').value;
     const completed = false;
-		const todoId = (0,uuid__WEBPACK_IMPORTED_MODULE_9__["default"])();
+		const todoId = (0,uuid__WEBPACK_IMPORTED_MODULE_10__["default"])();
 
     // Validate
     if (title === '') {
@@ -1121,4 +1215,4 @@ document.querySelector('.cancel-btn').addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle7e7a797dd127dd991c69.js.map
+//# sourceMappingURL=bundleed72a3c9490e61020217.js.map
