@@ -9,6 +9,7 @@ import projectIcon from './assets/folder.svg';
 import trash from './assets/trash.svg';
 import pencil from './assets/pencil.svg';
 import inboxImg from './assets/inbox.svg';
+import favicon from './assets/favicon.png';
 
 
 const inbox = document.querySelector('.inbox');
@@ -41,7 +42,7 @@ function loadProjectPage(e) {
 	projectName.innerText = e.target.innerText;
 }
 
-// Event listener to open form and create new project
+// Event listener to open project form and create new project
 projectFormBtn.addEventListener('click', (e) => {
 	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');

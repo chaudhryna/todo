@@ -1,3 +1,5 @@
+import UI from "./UI";
+
 // Local class (to access localstorage)
 class Local {
 	static getTodos() {
@@ -14,8 +16,15 @@ class Local {
 		todos.push(todo);
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
-	static editTodo(id) {
-		console.log(`From the Local file! ${e.target}`)
+	static editTodo(todoId) {
+		const todos = Local.getTodos();
+
+		todos.forEach((todo, index) => {
+			if (todo.todoId === todoId) {
+				todo.isEditing = true;
+				localStorage.setItem('todos', JSON.stringify(todos));
+			}
+		})
 	}
 	static deleteTodo(id) {
 		const todos = Local.getTodos();
@@ -25,6 +34,19 @@ class Local {
 			}
 		});
 		localStorage.setItem('todos', JSON.stringify(todos));
+	}
+	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate) {
+		const todos = Local.getTodos();
+		todos.forEach((todo, index) => {
+			if (todo.todoId === todoId) {
+				todo.title = newTitle;
+				todo.description = newDescription;
+				todo.priority = newPriority;
+				todo.dueDate = newDueDate;
+				todo.isEditing = false;
+			}
+		})
+		Local.addTodo(todo);
 	}
 }
 
