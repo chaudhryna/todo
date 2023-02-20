@@ -1,5 +1,3 @@
-import UI from "./UI";
-
 // Local class (to access localstorage)
 class Local {
 	static getTodos() {
@@ -11,6 +9,15 @@ class Local {
 		}
 		return todos;
 	}
+	
+	static getTodosByProject(projectId) {
+		const todos = Local.getTodos();
+		const projectTodos = todos.filter(todo => {
+			return todo.projectId === projectId;
+		})
+		return projectTodos;
+	}
+
 	static getProjects() {
 		let projects;
 		if (localStorage.getItem('projects') === null) {
@@ -19,14 +26,6 @@ class Local {
 			projects = JSON.parse(localStorage.getItem('projects'));
 		}
 		return projects;
-	}
-
-	static getTodosByProject(projectId) {
-		const todos = Local.getTodos();
-		const projectTodos = todos.filter(todo => {
-			return todo.projectId === projectId;
-		})
-		return projectTodos;
 	}
 
 	static addTodo(todo) {
@@ -44,7 +43,7 @@ class Local {
 	static editTodo(todoId) {
 		const todos = Local.getTodos();
 
-		todos.forEach((todo, index) => {
+		todos.forEach((todo) => {
 			if (todo.todoId === todoId) {
 				todo.isEditing = true;
 				localStorage.setItem('todos', JSON.stringify(todos));
@@ -59,11 +58,6 @@ class Local {
 			return todo.todoId === todoId;
 		})
 		return detailTodo;
-		// todos.forEach((todo) => {
-		// 	if (todo.todoId === todoId) {
-		// 		return todo 
-		// 	}
-		// })
 	}
 
 	static deleteTodo(id) {

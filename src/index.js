@@ -32,7 +32,8 @@ newProjectBtn.addEventListener('click', () => {
 inbox.addEventListener('click', () => {
 	const projectName = document.querySelector('#project-name');
 	projectName.innerText = 'Inbox';
-	UI.displayTodos();
+	projectName.dataset.project = '';
+ 	UI.displayTodos();
 });
 
 
@@ -59,7 +60,7 @@ openTodoForm.addEventListener('click', () => {
 });
 
 // Event: Display all todos when page loads
-document.addEventListener('DOMContentLoaded', UI.loadPage)
+document.addEventListener('DOMContentLoaded', UI.loadPage);
 
 // Event: Add todo
 document.querySelector('#todo-form').addEventListener('submit', (e) => {
@@ -74,30 +75,22 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
 		const projectSelect = document.querySelector('#project-select');
     const projectId = projectSelect.value;
 		
-    // Validate
-    if (title === '') {
-        // UI.showAlert('Please fill in all fields', 'danger');
-    } else {
-			// Make a new todo
-			const todo = new Todo(title, description, dueDate, priority, completed, todoId, projectId);
+		// Make a new todo
+		const todo = new Todo(title, description, dueDate, priority, completed, todoId, projectId);
 
-			// Add todo to list
-			UI.addTodoToList(todo);
+		// Add todo to list
+		UI.addTodoToList(todo);
 
-			// Add todo to localstorage
-			Local.addTodo(todo);
+		// Add todo to localstorage
+		Local.addTodo(todo);
 
-			// // Show success message
-			// UI.showAlert('Todo Added', 'success')
-
-			// Clear fields
-			UI.clearFields();
-			todoModal.close();
-	}
-})
+		// Clear fields
+		UI.clearFields();
+		todoModal.close();
+	});
 
 // Cancel button to close add todo modal
 document.querySelector('.cancel-btn').addEventListener('click', () => {
 	UI.clearFields();
 	todoModal.close();
-})
+});

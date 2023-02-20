@@ -3,6 +3,8 @@ import Local from "./Local";
 // UI class
 class UI {
 	static loadPage() {
+		const projectName = document.querySelector('#project-name');
+		projectName.innerText = 'Inbox';
 		UI.displayProjects();
 		UI.displayTodos();
 	}
@@ -10,8 +12,19 @@ class UI {
 	static displayTodos() {
 		const todoList = document.querySelector('#todo-list');
 		todoList.innerHTML = '';
-		const todos = Local.getTodos();
-		todos.forEach((todo) => UI.addTodoToList(todo))
+		let todos;
+		const projectName = document.querySelector('#project-name');
+		console.log(projectName);
+		if (projectName.dataset.project) {
+			console.log(projectName.dataset.project)
+			const projectId = projectName.dataset.project
+			todos = Local.getTodosByProject(projectId);
+			todos.forEach((todo) => UI.addTodoToList(todo))
+		} else {
+			todos = Local.getTodos();
+			console.log(todos);
+			todos.forEach((todo) => UI.addTodoToList(todo))
+		}
 	}
 
 	static displayProjects() {
@@ -26,6 +39,7 @@ class UI {
 		const projectId = e.target.dataset.project;
 		const projectName = document.querySelector('#project-name');
 		projectName.innerText = e.target.innerText;
+		projectName.dataset.project = projectId;
 		const todoList = document.querySelector('#todo-list');
 		todoList.innerHTML = '';
 		const projectTodos = Local.getTodosByProject(projectId);
@@ -78,10 +92,17 @@ class UI {
 			prioritySelect.appendChild(lowOption);
 			priorityTd.appendChild(prioritySelect);
 			row.appendChild(priorityTd);
-
-			// const projectSelect = document.createElement('select');
-			// projectSelect.dataset.todo = todo.todoId;
-
+			// 
+			const projects = Local.getProjects();
+			let activeProjects = projects.map(project => project);
+			const projectTd = document.createElement('td');
+			const projectSelect = document.createElement('select');
+			projectSelect.dataset.todo = todo.todoId;
+			let options = activeProjects.map(project => `<option value="${project.projectId}">${project.name}</option>`).join('\n')
+			projectSelect.innerHTML = options
+			projectTd.appendChild(projectSelect);
+			row.appendChild(projectTd);
+			//
 			const updateTd = document.createElement('td');
 			const updateBtn = document.createElement('button');
 			updateBtn.classList.add('update');
@@ -152,22 +173,14 @@ class UI {
 	static updateTodo(e) {
 		const updateBtn = e.target;
 		const todoId = updateBtn.dataset.todoId;
-		console.log(updateBtn.dataset.todoId);
 		const titleField = document.querySelector(`[data-title='${todoId}']`);
 		const newTitle = titleField.value;
-		console.log(newTitle);
-
 		const descriptionField = document.querySelector(`[data-description='${todoId}']`);
 		const newDescription = descriptionField.value;
-		console.log(newDescription);
-
 		const priorityField = document.querySelector(`[data-priority='${todoId}']`);
 		const newPriority = priorityField.value;
-		console.log(newPriority);
-
 		const dueDateField = document.querySelector(`[data-due-date='${todoId}']`);
 		const newDueDate = dueDateField.value;
-
 		Local.updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
 		UI.displayTodos();
 	}
@@ -201,7 +214,6 @@ class UI {
 	}
 
 	static closeDetailModal() {
-		console.log(`Close btn clicked.`);
 		const todoDetailModal = document.querySelector('.todoDetailModal');
 		const todoDetail = document.querySelector('#todoDetail');
 		todoDetail.innerHTML = '';
@@ -213,7 +225,6 @@ class UI {
 		document.querySelector('#description').value = '';
 		document.querySelector('#dueDate').value = '';
 	}
-	
 }
 
 export default UI;
