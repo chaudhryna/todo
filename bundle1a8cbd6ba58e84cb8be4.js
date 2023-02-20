@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n\tgrid-template-areas:\n\t\t'nav nav nav'\n\t\t'aside main main'\n\t\t'aside main main';\n\tgrid-template-rows: 3em 1fr;\n\tgrid-template-columns: 20% 1fr;\n}\n\nnav {\n\tgrid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n\tgrid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 5em;\n}\n\n.inbox h2 {\n\tdisplay: inline-block;\n\t/* text-align: middle; */\n\tmargin-left: .5em;\n}\n\n#inboxImg {\n\twidth: 2em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n\ttext-align: end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n\tgrid-area: main;\n\tbackground: #eaeaea;\n\tpadding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n}\n\nth,\ntd {\n\tpadding: 8px;\n\ttext-align: left;\n\tborder-bottom: 1px solid #ddd;\n}\n\ntr:nth-child(even) {\n\tbackground-color: rgb(202, 232, 241);\n}\n\ntr:nth-child(odd) {\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: white;\n}\n\nth {\n\tbackground-color: #ab7c94;\n\tcolor: white;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;CACC,qBAAqB;CACrB,SAAS;CACT,UAAU;CACV,sBAAsB;CACtB,oCAAoC;AACrC;;AAEA;CACC,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb;;;mBAGkB;CAClB,2BAA2B;CAC3B,8BAA8B;AAC/B;;AAEA;CACC,cAAc;CACd,2BAA2B;CAC3B,gCAAgC;AACjC;;AAEA;CACC,cAAc;CACd,WAAW;AACZ;;AAEA;CACC,gBAAgB;CAChB,8BAA8B;CAC9B,aAAa;CACb,YAAY;AACb;;AAEA;CACC,sBAAsB;CACtB,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,gBAAgB;AACjB;;AAEA;CACC,qBAAqB;CACrB,wBAAwB;CACxB,iBAAiB;AAClB;;AAEA;CACC,UAAU;CACV,qBAAqB;CACrB,sBAAsB;AACvB;;AAEA;CACC,eAAe;CACf,kBAAkB;CAClB,eAAe;CACf,YAAY;CACZ,gBAAgB;AACjB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,eAAe;CACf,cAAc;AACf;;AAEA;CACC,eAAe;AAChB;;AAEA;CACC,eAAe;CACf,6BAA6B;AAC9B;;AAEA;;CAEC,cAAc;CACd,kBAAkB;CAClB,gCAAgC;CAChC,sBAAsB;CACtB,eAAe;CACf,eAAe;AAChB;AACA;;;;CAIC,cAAc;CACd,iBAAiB;CACjB,uCAAuC;AACxC;;AAEA;CACC,aAAa;AACd;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,YAAY;CACZ,eAAe;CACf,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,aAAa;CACb,sBAAsB;CACtB,eAAe;CACf,QAAQ;AACT;;AAEA;CACC,YAAY;CACZ,kBAAkB;CAClB,oCAAoC;CACpC,YAAY;AACb;;AAEA;CACC,kCAAkC;AACnC;;AAEA;CACC,sBAAsB;CACtB,WAAW;CACX,gBAAgB;AACjB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,mBAAmB;CACnB,aAAa;CACb,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;AAChB;;AAEA;;CAEC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,WAAW;CACX,oBAAoB;AACrB;;AAEA;CACC,iBAAiB;CACjB,iCAAiC;CACjC,WAAW;CACX,cAAc;CACd,YAAY;CACZ,uCAAuC;CACvC,kBAAkB;AACnB;;AAEA;CACC,eAAe;CACf,mBAAmB;CACnB,gBAAgB;CAChB,aAAa;CACb,sBAAsB;CACtB,2BAA2B;AAC5B;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,yBAAyB;CACzB,WAAW;AACZ;;AAEA;;CAEC,YAAY;CACZ,gBAAgB;CAChB,6BAA6B;AAC9B;;AAEA;CACC,oCAAoC;AACrC;;AAEA;CACC,iCAAiC;CACjC,YAAY;AACb;;AAEA;CACC,yBAAyB;CACzB,YAAY;AACb","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n\tgrid-template-areas:\n\t\t'nav nav nav'\n\t\t'aside main main'\n\t\t'aside main main';\n\tgrid-template-rows: 3em 1fr;\n\tgrid-template-columns: 20% 1fr;\n}\n\nnav {\n\tgrid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n\tgrid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 5em;\n}\n\n.inbox h2 {\n\tdisplay: inline-block;\n\t/* text-align: middle; */\n\tmargin-left: .5em;\n}\n\n#inboxImg {\n\twidth: 2em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n\ttext-align: end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n\tgrid-area: main;\n\tbackground: #eaeaea;\n\tpadding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n}\n\nth,\ntd {\n\tpadding: 8px;\n\ttext-align: left;\n\tborder-bottom: 1px solid #ddd;\n}\n\ntr:nth-child(even) {\n\tbackground-color: rgb(202, 232, 241);\n}\n\ntr:nth-child(odd) {\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: white;\n}\n\nth {\n\tbackground-color: #ab7c94;\n\tcolor: white;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n\tgrid-template-areas:\n\t\t'nav nav nav'\n\t\t'aside main main'\n\t\t'aside main main';\n\tgrid-template-rows: 3em 1fr;\n\tgrid-template-columns: 20% 1fr;\n}\n\nnav {\n\tgrid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n\tgrid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 5em;\n}\n\n.inbox h2 {\n\tdisplay: inline-block;\n\t/* text-align: middle; */\n\tmargin-left: .5em;\n}\n\n#inboxImg {\n\twidth: 2em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n\ttext-align: end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n\tgrid-area: main;\n\tbackground: #eaeaea;\n\tpadding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n}\n\nth,\ntd {\n\tpadding: 8px;\n\ttext-align: left;\n\tborder-bottom: 1px solid #ddd;\n}\n\ntr:nth-child(even) {\n\tbackground-color: rgb(202, 232, 241);\n}\n\ntr:nth-child(odd) {\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: white;\n}\n\nth {\n\tbackground-color: #ab7c94;\n\tcolor: white;\n}\n/* \n.edit {\n\theight: 30px;\n} */\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;CACC,qBAAqB;CACrB,SAAS;CACT,UAAU;CACV,sBAAsB;CACtB,oCAAoC;AACrC;;AAEA;CACC,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb;;;mBAGkB;CAClB,2BAA2B;CAC3B,8BAA8B;AAC/B;;AAEA;CACC,cAAc;CACd,2BAA2B;CAC3B,gCAAgC;AACjC;;AAEA;CACC,cAAc;CACd,WAAW;AACZ;;AAEA;CACC,gBAAgB;CAChB,8BAA8B;CAC9B,aAAa;CACb,YAAY;AACb;;AAEA;CACC,sBAAsB;CACtB,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,gBAAgB;AACjB;;AAEA;CACC,qBAAqB;CACrB,wBAAwB;CACxB,iBAAiB;AAClB;;AAEA;CACC,UAAU;CACV,qBAAqB;CACrB,sBAAsB;AACvB;;AAEA;CACC,eAAe;CACf,kBAAkB;CAClB,eAAe;CACf,YAAY;CACZ,gBAAgB;AACjB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,eAAe;CACf,cAAc;AACf;;AAEA;CACC,eAAe;AAChB;;AAEA;CACC,eAAe;CACf,6BAA6B;AAC9B;;AAEA;;CAEC,cAAc;CACd,kBAAkB;CAClB,gCAAgC;CAChC,sBAAsB;CACtB,eAAe;CACf,eAAe;AAChB;AACA;;;;CAIC,cAAc;CACd,iBAAiB;CACjB,uCAAuC;AACxC;;AAEA;CACC,aAAa;AACd;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,YAAY;CACZ,eAAe;CACf,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,aAAa;CACb,sBAAsB;CACtB,eAAe;CACf,QAAQ;AACT;;AAEA;CACC,YAAY;CACZ,kBAAkB;CAClB,oCAAoC;CACpC,YAAY;AACb;;AAEA;CACC,kCAAkC;AACnC;;AAEA;CACC,sBAAsB;CACtB,WAAW;CACX,gBAAgB;AACjB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,mBAAmB;CACnB,aAAa;CACb,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;AAChB;;AAEA;;CAEC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,WAAW;CACX,oBAAoB;AACrB;;AAEA;CACC,iBAAiB;CACjB,iCAAiC;CACjC,WAAW;CACX,cAAc;CACd,YAAY;CACZ,uCAAuC;CACvC,kBAAkB;AACnB;;AAEA;CACC,eAAe;CACf,mBAAmB;CACnB,gBAAgB;CAChB,aAAa;CACb,sBAAsB;CACtB,2BAA2B;AAC5B;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,yBAAyB;CACzB,WAAW;AACZ;;AAEA;;CAEC,YAAY;CACZ,gBAAgB;CAChB,6BAA6B;AAC9B;;AAEA;CACC,oCAAoC;AACrC;;AAEA;CACC,iCAAiC;CACjC,YAAY;AACb;;AAEA;CACC,yBAAyB;CACzB,YAAY;AACb;AACA;;;GAGG","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n\ttext-decoration: none;\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\tfont-family: 'Open Sans', sans-serif;\n}\n\nbody {\n\tbackground: #f5f6fa;\n}\n\n.container {\n\tdisplay: grid;\n\tgrid-template-areas:\n\t\t'nav nav nav'\n\t\t'aside main main'\n\t\t'aside main main';\n\tgrid-template-rows: 3em 1fr;\n\tgrid-template-columns: 20% 1fr;\n}\n\nnav {\n\tgrid-area: nav;\n\tbackground: rgb(5, 68, 104);\n\tbox-shadow: 0 8px 6px -6px black;\n}\n\nnav h2 {\n\tpadding: 0.7em;\n\tcolor: #fff;\n}\n\n.sidebar {\n\tgrid-area: aside;\n\tbackground: rgb(212, 230, 241);\n\theight: 100vh;\n\tpadding: 1em;\n}\n\n.sidebar h3 {\n\tcolor: rgb(44, 62, 80);\n\tpadding: 0 1.5em;\n\tfont-size: 1rem;\n}\n\n.sidebar .icon {\n\twidth: 1.2em;\n}\n\n.inbox {\n\tpadding-top: 5em;\n}\n\n.inbox h2 {\n\tdisplay: inline-block;\n\t/* text-align: middle; */\n\tmargin-left: .5em;\n}\n\n#inboxImg {\n\twidth: 2em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n}\n\n#newProjectBtn {\n\tmargin-top: 3em;\n\tmargin-bottom: 2em;\n\tcursor: pointer;\n\tborder: none;\n\tbackground: none;\n}\n\n#newProjectBtn img {\n\twidth: 1em;\n}\n\n#project-title {\n\tpadding: 0.4em;\n}\n\n#projectFormBtn {\n\tmargin-top: 1em;\n\tpadding: 0.2em;\n}\n\n.projects {\n\tmargin-top: 3em;\n}\n\n.project-list {\n\tmargin-top: 1em;\n\tborder-top: 1px solid #10558d;\n}\n\n.sidebar ul li,\n.inbox {\n\tdisplay: block;\n\tpadding: 13px 30px;\n\tborder-bottom: 1px solid #10558d;\n\tcolor: rgb(44, 62, 80);\n\tfont-size: 1rem;\n\tcursor: pointer;\n}\n.sidebar ul li:hover,\n.sidebar ul li:active,\n.inbox:active,\n.inbox:hover {\n\tcolor: #0c7db1;\n\tbackground: white;\n\tborder-right: 2px solid rgb(5, 68, 104);\n}\n\n.hide {\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\n.openTodoForm {\n\twidth: 1.5em;\n\tcursor: pointer;\n\tpadding-top: 2em;\n\ttext-align: end;\n}\n\n.flex-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n\tgap: 1em;\n}\n\n.todoModal {\n\tborder: none;\n\tborder-radius: 6px;\n\tbox-shadow: 0 0 1em rgb(0 0 0 / 0.3);\n\tmargin: auto;\n}\n\n.todoModal::backdrop {\n\tbackground-color: rgb(0 0 0 / 0.3);\n}\n\n#todo-form {\n\tbackground-color: #fff;\n\twidth: 100%;\n\tpadding: 2em 4em;\n}\n\n#todo-form h3 {\n\tmargin-bottom: 1em;\n}\n\n.form-row {\n\tmargin-bottom: 10px;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex-direction: column;\n\tflex-wrap: wrap;\n}\n\n#todo-form input,\n#todo-form select {\n\twidth: 20em;\n\tpadding: 8px;\n\tborder-radius: 4px;\n\tborder: 1px solid #e5e7eb;\n}\n\n#todo-form label {\n\tcolor: gray;\n\tmargin-bottom: 0.5em;\n}\n\n#todo-form button {\n\tfont-size: 1.1rem;\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: #fff;\n\tpadding: 0.5em;\n\tborder: none;\n\tbox-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n\tborder-radius: 8px;\n}\n\nmain {\n\tgrid-area: main;\n\tbackground: #eaeaea;\n\tpadding: 3em 2em;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: flex-start;\n}\n\nmain h1 {\n\tmargin-bottom: 2em;\n}\n\n#deleteBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\n#editBtn {\n\twidth: 1.2em;\n\tcursor: pointer;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n}\n\nth,\ntd {\n\tpadding: 8px;\n\ttext-align: left;\n\tborder-bottom: 1px solid #ddd;\n}\n\ntr:nth-child(even) {\n\tbackground-color: rgb(202, 232, 241);\n}\n\ntr:nth-child(odd) {\n\tbackground-color: rgb(5, 68, 104);\n\tcolor: white;\n}\n\nth {\n\tbackground-color: #ab7c94;\n\tcolor: white;\n}\n/* \n.edit {\n\theight: 30px;\n} */\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -708,11 +708,35 @@ class Local {
 		}
 		return todos;
 	}
+	static getProjects() {
+		let projects;
+		if (localStorage.getItem('projects') === null) {
+			projects = [];
+		} else {
+			projects = JSON.parse(localStorage.getItem('projects'));
+		}
+		return projects;
+	}
+
+	static getTodosByProject(projectId) {
+		const todos = Local.getTodos();
+		return projectTodos = todos.filter(todo => {
+			return todo.projectId === projectId;
+		})
+	}
+
 	static addTodo(todo) {
 		const todos = Local.getTodos();
 		todos.push(todo);
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
+
+	static addProject(project) {
+		const projects = Local.getProjects();
+		projects.push(project);
+		localStorage.setItem('projects', JSON.stringify(projects));
+	}
+
 	static editTodo(todoId) {
 		const todos = Local.getTodos();
 
@@ -723,6 +747,7 @@ class Local {
 			}
 		})
 	}
+
 	static deleteTodo(id) {
 		const todos = Local.getTodos();
 		todos.forEach((todo, index) => {
@@ -732,22 +757,55 @@ class Local {
 		});
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
+
+	static deleteProject(id) {
+		const projects = Local.getProjects();
+		projects.forEach((project, index) => {
+			if (project.projectId === id) {
+				projects.splice(index, 1);
+			}
+		});
+		localStorage.setItem('projects', JSON.stringify(projects));
+	}
+
 	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate) {
 		const todos = Local.getTodos();
-		todos.forEach((todo, index) => {
+		todos.forEach((todo) => {
 			if (todo.todoId === todoId) {
+				Local.deleteTodo(todo.todoId)
 				todo.title = newTitle;
 				todo.description = newDescription;
 				todo.priority = newPriority;
 				todo.dueDate = newDueDate;
 				todo.isEditing = false;
+				Local.addTodo(todo);
 			}
 		})
-		Local.addTodo(todo);
 	}
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Local);
+
+/***/ }),
+
+/***/ "./src/Project.js":
+/*!************************!*\
+  !*** ./src/Project.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Project {
+	constructor(name, projectId) 
+		{
+		this.name = name;
+		this.projectId = projectId;
+		}
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);
 
 /***/ }),
 
@@ -762,7 +820,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 class Todo {
-	constructor(title, description, dueDate, priority, completed, todoId) 
+	constructor(title, description, dueDate, priority, completed, todoId, projectId) 
 		{
 		this.title = title;
 		this.description = description;
@@ -770,6 +828,7 @@ class Todo {
 		this.priority = priority;
 		this.completed = completed;
 		this.todoId = todoId;
+		this.projectId = projectId;
 		}
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Todo);
@@ -792,10 +851,34 @@ __webpack_require__.r(__webpack_exports__);
 
 // UI class
 class UI {
+	static loadPage() {
+		UI.displayProjects();
+		UI.displayTodos();
+	}
+
 	static displayTodos() {
+		const todoList = document.querySelector('#todo-list');
+		todoList.innerHTML = '';
 		const todos = _Local__WEBPACK_IMPORTED_MODULE_0__["default"].getTodos();
-        
 		todos.forEach((todo) => UI.addTodoToList(todo))
+	}
+
+	static displayProjects() {
+		const projectList = document.querySelector('#project-list');
+		projectList.innerHTML = '';
+		const projects = _Local__WEBPACK_IMPORTED_MODULE_0__["default"].getProjects();
+		projects.forEach((project) => UI.addProjectToList(project));
+	}
+
+	// Load project page with it's todos if clicked on
+	static loadProjectPage(e) {
+		const projectId = e.target.dataset.project;
+		const projectName = document.querySelector('#project-name');
+		projectName.innerText = e.target.innerText;
+		const todoList = document.querySelector('#todo-list');
+		todoList.innerHTML = '';
+		const projectTodos = _Local__WEBPACK_IMPORTED_MODULE_0__["default"].getTodosByProject(projectId);
+		projectTodos.forEach((todo) => UI.addTodoToList(todo))
 	}
 
 	static addTodoToList(todo) {
@@ -808,16 +891,19 @@ class UI {
 			titleField.type = 'text';
 			titleField.value = todo.title;
 			row.appendChild(titleField);
+			
 			const descriptionField = document.createElement('input');
-			descriptionField.type = 'text';
 			descriptionField.dataset.description = todo.todoId;
+			descriptionField.type = 'text';
 			descriptionField.value = todo.description;
 			row.appendChild(descriptionField);
+
 			const dueDateField = document.createElement('input');
-			dueDateField.type = 'date';
 			dueDateField.dataset.dueDate = todo.todoId;
+			dueDateField.type = 'date';
 			dueDateField.value = todo.dueDate;
 			row.appendChild(dueDateField);
+			
 			const prioritySelect = document.createElement('select');
 			prioritySelect.dataset.priority = todo.todoId;
 			const highOption = document.createElement('option');
@@ -833,7 +919,13 @@ class UI {
 			prioritySelect.appendChild(mediumOption);
 			prioritySelect.appendChild(lowOption);
 			row.appendChild(prioritySelect);
+
+			// const projectSelect = document.createElement('select');
+			// projectSelect.dataset.todo = todo.todoId;
+
+
 			const updateBtn = document.createElement('button');
+			updateBtn.classList.add('update');
 			updateBtn.setAttribute('id', 'updateBtn');
 			updateBtn.dataset.todoId = todo.todoId;
 			updateBtn.innerText = 'Update';
@@ -856,6 +948,7 @@ class UI {
 			row.appendChild(deleteBtn);
 			
 			const editBtn = document.createElement('td');
+			editBtn.id = todo.todoId;
 			const pencil = document.createElement('img');
 			pencil.src = './pencil.svg';
 			pencil.setAttribute('id', 'editBtn');
@@ -864,33 +957,45 @@ class UI {
 			pencil.addEventListener('click', UI.editTodo);
 			editBtn.appendChild(pencil);
 			row.appendChild(editBtn); 
-		
 			todoList.appendChild(row);
 			}
 		}
 
+	static addProjectToList(project) {
+		const projectTitle = document.querySelector('#project-title');
+		const projectList = document.querySelector('#project-list');
+		const li = document.createElement('li');
+		li.dataset.project = project.projectId;
+		li.innerText = project.name;
+		li.addEventListener('click', UI.loadProjectPage);
+		projectList.appendChild(li);
+		projectTitle.innerHTML = '';
+	}
+
 	static deleteTodo(e) {
 		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].deleteTodo(e.target.parentElement.id);
-		
 		e.target.parentElement.parentElement.remove();
 	}
 
 	static updateTodo(e) {
 		const updateBtn = e.target;
 		const todoId = updateBtn.dataset.todoId;
+		console.log(updateBtn.dataset.todoId);
 		const titleField = document.querySelector(`[data-title='${todoId}']`);
 		const newTitle = titleField.value;
+		console.log(newTitle);
 
 		const descriptionField = document.querySelector(`[data-description='${todoId}']`);
 		const newDescription = descriptionField.value;
+		console.log(newDescription);
 
 		const priorityField = document.querySelector(`[data-priority='${todoId}']`);
 		const newPriority = priorityField.value;
+		console.log(newPriority);
 
-		const dueDateField = document.querySelector(`[data-dueDate='${todoId}']`);
+		const dueDateField = document.querySelector(`[data-due-date='${todoId}']`);
 		const newDueDate = dueDateField.value;
 
-		updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
 		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
 		UI.displayTodos();
 	}
@@ -899,6 +1004,8 @@ class UI {
 		const editBtn = e.target;
 		const todoId = editBtn.dataset.todoId;
 		_Local__WEBPACK_IMPORTED_MODULE_0__["default"].editTodo(todoId);
+		UI.displayTodos();
+		
 	}
 
 	// static showAlert(message, className) {
@@ -1097,22 +1204,23 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
 /* harmony import */ var _Todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Todo */ "./src/Todo.js");
-/* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
-/* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UI */ "./src/UI.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
-/* harmony import */ var _assets_add_solid_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/add-solid.svg */ "./src/assets/add-solid.svg");
-/* harmony import */ var _assets_folder_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/folder.svg */ "./src/assets/folder.svg");
-/* harmony import */ var _assets_trash_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/trash.svg */ "./src/assets/trash.svg");
-/* harmony import */ var _assets_pencil_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/pencil.svg */ "./src/assets/pencil.svg");
-/* harmony import */ var _assets_inbox_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/inbox.svg */ "./src/assets/inbox.svg");
-/* harmony import */ var _assets_favicon_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/favicon.png */ "./src/assets/favicon.png");
+/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Project */ "./src/Project.js");
+/* harmony import */ var _Local__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Local */ "./src/Local.js");
+/* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UI */ "./src/UI.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
+/* harmony import */ var _assets_add_solid_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/add-solid.svg */ "./src/assets/add-solid.svg");
+/* harmony import */ var _assets_folder_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/folder.svg */ "./src/assets/folder.svg");
+/* harmony import */ var _assets_trash_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/trash.svg */ "./src/assets/trash.svg");
+/* harmony import */ var _assets_pencil_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/pencil.svg */ "./src/assets/pencil.svg");
+/* harmony import */ var _assets_inbox_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/inbox.svg */ "./src/assets/inbox.svg");
+/* harmony import */ var _assets_favicon_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/favicon.png */ "./src/assets/favicon.png");
 
 
 
 
 
 
-
+// the images have to be loaded even if they aren't referenced here!
 
 
 
@@ -1121,12 +1229,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const inbox = document.querySelector('.inbox');
-const projectName = document.querySelector('#project-name');
 const newProjectBtn = document.querySelector('#newProjectBtn');
 const projectForm = document.querySelector('.projectForm');
 const projectFormBtn = document.querySelector('#projectFormBtn');
-const projectArray = [];
-const projectList = document.querySelector('.project-list');
 const openTodoForm = document.querySelector('.openTodoForm');
 const todoModal = document.querySelector('.todoModal');
 
@@ -1139,38 +1244,37 @@ newProjectBtn.addEventListener('click', () => {
 
 // Load inbox
 inbox.addEventListener('click', () => {
+	const projectName = document.querySelector('#project-name');
 	// projectName.textContent = '[inbox.dataset.project]';
 	projectName.innerText = 'Inbox';
+	_UI__WEBPACK_IMPORTED_MODULE_4__["default"].displayTodos();
 });
 
-
-// Load project page
-function loadProjectPage(e) {
-	console.log(e);
-	projectName.innerText = e.target.innerText;
-}
 
 // Event listener to open project form and create new project
 projectFormBtn.addEventListener('click', (e) => {
 	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
 	e.preventDefault();
-	let projectTitle = document.querySelector('#project-title');
-	const li = document.createElement('li');
-	li.dataset.project = projectTitle.value.toLowerCase();
-	li.innerText = projectTitle.value;
-	projectArray.push(projectTitle.value);
-	li.addEventListener('click', loadProjectPage);
-	projectList.appendChild(li);
-	projectTitle.value = '';
+	const name = document.querySelector('#project-title').value;
+	const projectId = (0,uuid__WEBPACK_IMPORTED_MODULE_11__["default"])();
+	// Make a new project
+	const project = new _Project__WEBPACK_IMPORTED_MODULE_2__["default"](name, projectId);
+	_UI__WEBPACK_IMPORTED_MODULE_4__["default"].addProjectToList(project);
+	_Local__WEBPACK_IMPORTED_MODULE_3__["default"].addProject(project);
 });
 
 openTodoForm.addEventListener('click', () => {
 	todoModal.showModal();
+	const projects = _Local__WEBPACK_IMPORTED_MODULE_3__["default"].getProjects();
+	const projectSelect = document.querySelector('#project-select');
+	let activeProjects = projects.map(project => project);
+	let options = activeProjects.map(project => `<option value="${project.projectId}">${project.name}</option>`).join('\n')
+  projectSelect.innerHTML = options
 });
 
 // Event: Display all todos
-document.addEventListener('DOMContentLoaded', _UI__WEBPACK_IMPORTED_MODULE_3__["default"].displayTodos)
+document.addEventListener('DOMContentLoaded', _UI__WEBPACK_IMPORTED_MODULE_4__["default"].loadPage)
 
 // Event: Add todo
 document.querySelector('#todo-form').addEventListener('submit', (e) => {
@@ -1181,33 +1285,35 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
     const dueDate = document.querySelector('#dueDate').value;
     const priority = document.querySelector('#priority').value;
     const completed = false;
-		const todoId = (0,uuid__WEBPACK_IMPORTED_MODULE_10__["default"])();
-
+		const todoId = (0,uuid__WEBPACK_IMPORTED_MODULE_11__["default"])();
+		const projectSelect = document.querySelector('#project-select');
+    const projectId = projectSelect.value;
+		
     // Validate
     if (title === '') {
         // UI.showAlert('Please fill in all fields', 'danger');
     } else {
 			// Make a new todo
-			const todo = new _Todo__WEBPACK_IMPORTED_MODULE_1__["default"](title, description, dueDate, priority, completed, todoId);
+			const todo = new _Todo__WEBPACK_IMPORTED_MODULE_1__["default"](title, description, dueDate, priority, completed, todoId, projectId);
 
 			// Add todo to list
-			_UI__WEBPACK_IMPORTED_MODULE_3__["default"].addTodoToList(todo);
+			_UI__WEBPACK_IMPORTED_MODULE_4__["default"].addTodoToList(todo);
 
 			// Add todo to localstorage
-			_Local__WEBPACK_IMPORTED_MODULE_2__["default"].addTodo(todo);
+			_Local__WEBPACK_IMPORTED_MODULE_3__["default"].addTodo(todo);
 
 			// // Show success message
 			// UI.showAlert('Todo Added', 'success')
 
 			// Clear fields
-			_UI__WEBPACK_IMPORTED_MODULE_3__["default"].clearFields();
+			_UI__WEBPACK_IMPORTED_MODULE_4__["default"].clearFields();
 			todoModal.close();
 	}
 })
 
-// Cancel button
+// Cancel button to close add todo modal
 document.querySelector('.cancel-btn').addEventListener('click', () => {
-	_UI__WEBPACK_IMPORTED_MODULE_3__["default"].clearFields();
+	_UI__WEBPACK_IMPORTED_MODULE_4__["default"].clearFields();
 	todoModal.close();
 })
 
@@ -1215,4 +1321,4 @@ document.querySelector('.cancel-btn').addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundleed72a3c9490e61020217.js.map
+//# sourceMappingURL=bundle1a8cbd6ba58e84cb8be4.js.map
