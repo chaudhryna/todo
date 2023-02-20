@@ -2,10 +2,34 @@ import Local from "./Local";
 
 // UI class
 class UI {
+	static loadPage() {
+		UI.displayProjects();
+		UI.displayTodos();
+	}
+
 	static displayTodos() {
+		const todoList = document.querySelector('#todo-list');
+		todoList.innerHTML = '';
 		const todos = Local.getTodos();
-        
 		todos.forEach((todo) => UI.addTodoToList(todo))
+	}
+
+	static displayProjects() {
+		const projectList = document.querySelector('#project-list');
+		projectList.innerHTML = '';
+		const projects = Local.getProjects();
+		projects.forEach((project) => UI.addProjectToList(project));
+	}
+
+	// Load project page with it's todos if clicked on
+	static loadProjectPage(e) {
+		const projectId = e.target.dataset.project;
+		const projectName = document.querySelector('#project-name');
+		projectName.innerText = e.target.innerText;
+		const todoList = document.querySelector('#todo-list');
+		todoList.innerHTML = '';
+		const projectTodos = Local.getTodosByProject(projectId);
+		projectTodos.forEach((todo) => UI.addTodoToList(todo))
 	}
 
 	static addTodoToList(todo) {
@@ -18,16 +42,19 @@ class UI {
 			titleField.type = 'text';
 			titleField.value = todo.title;
 			row.appendChild(titleField);
+			
 			const descriptionField = document.createElement('input');
-			descriptionField.type = 'text';
 			descriptionField.dataset.description = todo.todoId;
+			descriptionField.type = 'text';
 			descriptionField.value = todo.description;
 			row.appendChild(descriptionField);
+
 			const dueDateField = document.createElement('input');
-			dueDateField.type = 'date';
 			dueDateField.dataset.dueDate = todo.todoId;
+			dueDateField.type = 'date';
 			dueDateField.value = todo.dueDate;
 			row.appendChild(dueDateField);
+			
 			const prioritySelect = document.createElement('select');
 			prioritySelect.dataset.priority = todo.todoId;
 			const highOption = document.createElement('option');
@@ -43,7 +70,13 @@ class UI {
 			prioritySelect.appendChild(mediumOption);
 			prioritySelect.appendChild(lowOption);
 			row.appendChild(prioritySelect);
+
+			// const projectSelect = document.createElement('select');
+			// projectSelect.dataset.todo = todo.todoId;
+
+
 			const updateBtn = document.createElement('button');
+			updateBtn.classList.add('update');
 			updateBtn.setAttribute('id', 'updateBtn');
 			updateBtn.dataset.todoId = todo.todoId;
 			updateBtn.innerText = 'Update';
@@ -66,6 +99,7 @@ class UI {
 			row.appendChild(deleteBtn);
 			
 			const editBtn = document.createElement('td');
+			editBtn.id = todo.todoId;
 			const pencil = document.createElement('img');
 			pencil.src = './pencil.svg';
 			pencil.setAttribute('id', 'editBtn');
@@ -74,34 +108,45 @@ class UI {
 			pencil.addEventListener('click', UI.editTodo);
 			editBtn.appendChild(pencil);
 			row.appendChild(editBtn); 
-		
 			todoList.appendChild(row);
 			}
 		}
 
+	static addProjectToList(project) {
+		const projectTitle = document.querySelector('#project-title');
+		const projectList = document.querySelector('#project-list');
+		const li = document.createElement('li');
+		li.dataset.project = project.projectId;
+		li.innerText = project.name;
+		li.addEventListener('click', UI.loadProjectPage);
+		projectList.appendChild(li);
+		projectTitle.innerHTML = '';
+	}
+
 	static deleteTodo(e) {
 		Local.deleteTodo(e.target.parentElement.id);
-		
 		e.target.parentElement.parentElement.remove();
 	}
 
 	static updateTodo(e) {
 		const updateBtn = e.target;
 		const todoId = updateBtn.dataset.todoId;
+		console.log(updateBtn.dataset.todoId);
 		const titleField = document.querySelector(`[data-title='${todoId}']`);
 		const newTitle = titleField.value;
+		console.log(newTitle);
 
 		const descriptionField = document.querySelector(`[data-description='${todoId}']`);
 		const newDescription = descriptionField.value;
+		console.log(newDescription);
 
 		const priorityField = document.querySelector(`[data-priority='${todoId}']`);
 		const newPriority = priorityField.value;
+		console.log(newPriority);
 
-		const dueDateField = document.querySelector(`[data-dueDate='${todoId}']`);
-		console.log(dueDateField.value);
+		const dueDateField = document.querySelector(`[data-due-date='${todoId}']`);
 		const newDueDate = dueDateField.value;
 
-		updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
 		Local.updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
 		UI.displayTodos();
 	}
@@ -110,6 +155,8 @@ class UI {
 		const editBtn = e.target;
 		const todoId = editBtn.dataset.todoId;
 		Local.editTodo(todoId);
+		UI.displayTodos();
+		
 	}
 
 	// static showAlert(message, className) {

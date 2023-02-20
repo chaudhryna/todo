@@ -1,9 +1,10 @@
 import './styles/style.css';
 import Todo from './Todo';
+import Project from './Project';
 import Local from './Local';
 import UI from './UI';
 import { v4 as uuidv4 } from 'uuid';
-
+// the images have to be loaded even if they aren't referenced here!
 import addIcon from './assets/add-solid.svg';
 import projectIcon from './assets/folder.svg';
 import trash from './assets/trash.svg';
@@ -11,14 +12,10 @@ import pencil from './assets/pencil.svg';
 import inboxImg from './assets/inbox.svg';
 import favicon from './assets/favicon.png';
 
-
 const inbox = document.querySelector('.inbox');
-const projectName = document.querySelector('#project-name');
 const newProjectBtn = document.querySelector('#newProjectBtn');
 const projectForm = document.querySelector('.projectForm');
 const projectFormBtn = document.querySelector('#projectFormBtn');
-const projectArray = [];
-const projectList = document.querySelector('.project-list');
 const openTodoForm = document.querySelector('.openTodoForm');
 const todoModal = document.querySelector('.todoModal');
 
@@ -31,38 +28,37 @@ newProjectBtn.addEventListener('click', () => {
 
 // Load inbox
 inbox.addEventListener('click', () => {
+	const projectName = document.querySelector('#project-name');
 	// projectName.textContent = '[inbox.dataset.project]';
 	projectName.innerText = 'Inbox';
+	UI.displayTodos();
 });
 
-
-// Load project page
-function loadProjectPage(e) {
-	console.log(e);
-	projectName.innerText = e.target.innerText;
-}
 
 // Event listener to open project form and create new project
 projectFormBtn.addEventListener('click', (e) => {
 	projectForm.classList.toggle('hide');
 	projectForm.classList.toggle('show');
 	e.preventDefault();
-	let projectTitle = document.querySelector('#project-title');
-	const li = document.createElement('li');
-	li.dataset.project = projectTitle.value.toLowerCase();
-	li.innerText = projectTitle.value;
-	projectArray.push(projectTitle.value);
-	li.addEventListener('click', loadProjectPage);
-	projectList.appendChild(li);
-	projectTitle.value = '';
+	const name = document.querySelector('#project-title').value;
+	const projectId = uuidv4();
+	// Make a new project
+	const project = new Project(name, projectId);
+	UI.addProjectToList(project);
+	Local.addProject(project);
 });
 
 openTodoForm.addEventListener('click', () => {
 	todoModal.showModal();
+	const projects = Local.getProjects();
+	const projectSelect = document.querySelector('#project-select');
+	let activeProjects = projects.map(project => project);
+	let options = activeProjects.map(project => `<option value="${project.projectId}">${project.name}</option>`).join('\n')
+  projectSelect.innerHTML = options
 });
 
 // Event: Display all todos
-document.addEventListener('DOMContentLoaded', UI.displayTodos)
+document.addEventListener('DOMContentLoaded', UI.loadPage)
 
 // Event: Add todo
 document.querySelector('#todo-form').addEventListener('submit', (e) => {
@@ -74,13 +70,15 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
     const priority = document.querySelector('#priority').value;
     const completed = false;
 		const todoId = uuidv4();
-
+		const projectSelect = document.querySelector('#project-select');
+    const projectId = projectSelect.value;
+		
     // Validate
     if (title === '') {
         // UI.showAlert('Please fill in all fields', 'danger');
     } else {
 			// Make a new todo
-			const todo = new Todo(title, description, dueDate, priority, completed, todoId);
+			const todo = new Todo(title, description, dueDate, priority, completed, todoId, projectId);
 
 			// Add todo to list
 			UI.addTodoToList(todo);
@@ -97,7 +95,7 @@ document.querySelector('#todo-form').addEventListener('submit', (e) => {
 	}
 })
 
-// Cancel button
+// Cancel button to close add todo modal
 document.querySelector('.cancel-btn').addEventListener('click', () => {
 	UI.clearFields();
 	todoModal.close();

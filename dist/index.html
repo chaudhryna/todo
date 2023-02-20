@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="icon" type="image/x-icon" href="./favicon.png">
-<script defer src="bundleed72a3c9490e61020217.js"></script></head>
+<script defer src="bundle1a8cbd6ba58e84cb8be4.js"></script></head>
 <body>
     <div class="container">
         <nav>
@@ -29,7 +29,8 @@
 
             <div class="projects">
                 <h3><span><img src="./folder.svg" class="icon"></span>   Projects</h3>
-                <ul class="project-list">
+
+                <ul id="project-list">
                 </ul>
             </div>
         </aside>
@@ -77,6 +78,12 @@
                             <option value="high">High</option>
                             <option value="medium">Medium</option>
                             <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="project">Project</label>
+                        <select name="project" id="project-select">
+                            <option value="name"></option>
                         </select>
                     </div>
                 </div>

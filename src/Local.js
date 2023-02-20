@@ -11,11 +11,36 @@ class Local {
 		}
 		return todos;
 	}
+	static getProjects() {
+		let projects;
+		if (localStorage.getItem('projects') === null) {
+			projects = [];
+		} else {
+			projects = JSON.parse(localStorage.getItem('projects'));
+		}
+		return projects;
+	}
+
+	static getTodosByProject(projectId) {
+		const todos = Local.getTodos();
+		const projectTodos = todos.filter(todo => {
+			return todo.projectId === projectId;
+		})
+		return projectTodos;
+	}
+
 	static addTodo(todo) {
 		const todos = Local.getTodos();
 		todos.push(todo);
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
+
+	static addProject(project) {
+		const projects = Local.getProjects();
+		projects.push(project);
+		localStorage.setItem('projects', JSON.stringify(projects));
+	}
+
 	static editTodo(todoId) {
 		const todos = Local.getTodos();
 
@@ -26,6 +51,7 @@ class Local {
 			}
 		})
 	}
+
 	static deleteTodo(id) {
 		const todos = Local.getTodos();
 		todos.forEach((todo, index) => {
@@ -35,18 +61,30 @@ class Local {
 		});
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}
+
+	static deleteProject(id) {
+		const projects = Local.getProjects();
+		projects.forEach((project, index) => {
+			if (project.projectId === id) {
+				projects.splice(index, 1);
+			}
+		});
+		localStorage.setItem('projects', JSON.stringify(projects));
+	}
+
 	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate) {
 		const todos = Local.getTodos();
-		todos.forEach((todo, index) => {
+		todos.forEach((todo) => {
 			if (todo.todoId === todoId) {
+				Local.deleteTodo(todo.todoId)
 				todo.title = newTitle;
 				todo.description = newDescription;
 				todo.priority = newPriority;
 				todo.dueDate = newDueDate;
 				todo.isEditing = false;
+				Local.addTodo(todo);
 			}
 		})
-		Local.addTodo(todo);
 	}
 }
 
