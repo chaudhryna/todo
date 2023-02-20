@@ -80,7 +80,7 @@ class Local {
 		localStorage.setItem('projects', JSON.stringify(projects));
 	}
 
-	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate) {
+	static updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate, newProject) {
 		const todos = Local.getTodos();
 		todos.forEach((todo) => {
 			if (todo.todoId === todoId) {
@@ -89,6 +89,7 @@ class Local {
 				todo.description = newDescription;
 				todo.priority = newPriority;
 				todo.dueDate = newDueDate;
+				todo.projectId = newProject;
 				todo.isEditing = false;
 				Local.addTodo(todo);
 			}

@@ -97,7 +97,7 @@ class UI {
 			let activeProjects = projects.map(project => project);
 			const projectTd = document.createElement('td');
 			const projectSelect = document.createElement('select');
-			projectSelect.dataset.todo = todo.todoId;
+			projectSelect.dataset.project = todo.todoId;
 			let options = activeProjects.map(project => `<option value="${project.projectId}">${project.name}</option>`).join('\n')
 			projectSelect.innerHTML = options
 			projectTd.appendChild(projectSelect);
@@ -181,7 +181,8 @@ class UI {
 		const newPriority = priorityField.value;
 		const dueDateField = document.querySelector(`[data-due-date='${todoId}']`);
 		const newDueDate = dueDateField.value;
-		Local.updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate);
+		const newProject = document.querySelector(`[data-project='${todoId}]`);
+		Local.updateTodo(todoId, newTitle, newDescription, newPriority, newDueDate, newProject);
 		UI.displayTodos();
 	}
 
