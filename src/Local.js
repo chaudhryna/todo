@@ -52,6 +52,20 @@ class Local {
 		})
 	}
 
+	static detailTodo(todoId) {
+		const todos = Local.getTodos();
+
+		const detailTodo = todos.filter(todo => {
+			return todo.todoId === todoId;
+		})
+		return detailTodo;
+		// todos.forEach((todo) => {
+		// 	if (todo.todoId === todoId) {
+		// 		return todo 
+		// 	}
+		// })
+	}
+
 	static deleteTodo(id) {
 		const todos = Local.getTodos();
 		todos.forEach((todo, index) => {

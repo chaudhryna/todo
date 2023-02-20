@@ -11,6 +11,7 @@ import trash from './assets/trash.svg';
 import pencil from './assets/pencil.svg';
 import inboxImg from './assets/inbox.svg';
 import favicon from './assets/favicon.png';
+import detail from './assets/detail.svg';
 
 const inbox = document.querySelector('.inbox');
 const newProjectBtn = document.querySelector('#newProjectBtn');
@@ -18,6 +19,7 @@ const projectForm = document.querySelector('.projectForm');
 const projectFormBtn = document.querySelector('#projectFormBtn');
 const openTodoForm = document.querySelector('.openTodoForm');
 const todoModal = document.querySelector('.todoModal');
+
 
 // Open the Project form in sidebar
 newProjectBtn.addEventListener('click', () => {
@@ -29,7 +31,6 @@ newProjectBtn.addEventListener('click', () => {
 // Load inbox
 inbox.addEventListener('click', () => {
 	const projectName = document.querySelector('#project-name');
-	// projectName.textContent = '[inbox.dataset.project]';
 	projectName.innerText = 'Inbox';
 	UI.displayTodos();
 });
@@ -57,7 +58,7 @@ openTodoForm.addEventListener('click', () => {
   projectSelect.innerHTML = options
 });
 
-// Event: Display all todos
+// Event: Display all todos when page loads
 document.addEventListener('DOMContentLoaded', UI.loadPage)
 
 // Event: Add todo

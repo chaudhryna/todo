@@ -136,18 +136,21 @@ nav h2 {
 	gap: 1em;
 }
 
-.todoModal {
+.todoModal,
+.todoDetailModal {
 	border: none;
 	border-radius: 6px;
 	box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
 	margin: auto;
 }
 
-.todoModal::backdrop {
+.todoModal::backdrop,
+.todoDetailModal::backdrop {
 	background-color: rgb(0 0 0 / 0.3);
 }
 
-#todo-form {
+#todo-form,
+#todoDetail {
 	background-color: #fff;
 	width: 100%;
 	padding: 2em 4em;
@@ -178,7 +181,8 @@ nav h2 {
 	margin-bottom: 0.5em;
 }
 
-#todo-form button {
+#todo-form button,
+#todoDetail button {
 	font-size: 1.1rem;
 	background-color: rgb(5, 68, 104);
 	color: #fff;
@@ -201,12 +205,9 @@ main h1 {
 	margin-bottom: 2em;
 }
 
-#deleteBtn {
-	width: 1.2em;
-	cursor: pointer;
-}
-
-#editBtn {
+#deleteBtn,
+#editBtn,
+#detailBtn {
 	width: 1.2em;
 	cursor: pointer;
 }
@@ -246,4 +247,17 @@ tr select {
 }
 tr button {
 	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #ab7c94;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.detail-label {
+	margin-bottom: 20px;
+}
+
+.detail-field {
+	font-weight: normal;
 }

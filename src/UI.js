@@ -37,24 +37,31 @@ class UI {
 		const row = document.createElement('tr');
 		
 		if (todo.isEditing === true) {
+			const titleTd = document.createElement('td');
 			const titleField = document.createElement('input');
 			titleField.dataset.title = todo.todoId;
 			titleField.type = 'text';
 			titleField.value = todo.title;
-			row.appendChild(titleField);
+			titleTd.appendChild(titleField);
+			row.appendChild(titleTd);
 			
+			const descriptionTd = document.createElement('td');
 			const descriptionField = document.createElement('input');
 			descriptionField.dataset.description = todo.todoId;
 			descriptionField.type = 'text';
 			descriptionField.value = todo.description;
-			row.appendChild(descriptionField);
+			descriptionTd.appendChild(descriptionField);
+			row.appendChild(descriptionTd);
 
+			const dateTd = document.createElement('td');
 			const dueDateField = document.createElement('input');
 			dueDateField.dataset.dueDate = todo.todoId;
 			dueDateField.type = 'date';
 			dueDateField.value = todo.dueDate;
-			row.appendChild(dueDateField);
+			dateTd.appendChild(dueDateField);
+			row.appendChild(dateTd);
 			
+			const priorityTd = document.createElement('td');
 			const prioritySelect = document.createElement('select');
 			prioritySelect.dataset.priority = todo.todoId;
 			const highOption = document.createElement('option');
@@ -69,19 +76,21 @@ class UI {
 			prioritySelect.appendChild(highOption);
 			prioritySelect.appendChild(mediumOption);
 			prioritySelect.appendChild(lowOption);
-			row.appendChild(prioritySelect);
+			priorityTd.appendChild(prioritySelect);
+			row.appendChild(priorityTd);
 
 			// const projectSelect = document.createElement('select');
 			// projectSelect.dataset.todo = todo.todoId;
 
-
+			const updateTd = document.createElement('td');
 			const updateBtn = document.createElement('button');
 			updateBtn.classList.add('update');
 			updateBtn.setAttribute('id', 'updateBtn');
 			updateBtn.dataset.todoId = todo.todoId;
 			updateBtn.innerText = 'Update';
 			updateBtn.addEventListener('click', UI.updateTodo);
-			row.appendChild(updateBtn);
+			updateTd.appendChild(updateBtn)
+			row.appendChild(updateTd);
 			todoList.appendChild(row);
 		} else {
 			row.innerHTML = `
@@ -108,6 +117,18 @@ class UI {
 			pencil.addEventListener('click', UI.editTodo);
 			editBtn.appendChild(pencil);
 			row.appendChild(editBtn); 
+			todoList.appendChild(row);
+			
+			const detailBtn = document.createElement('td');
+			detailBtn.id = todo.todoId;
+			const detail = document.createElement('img');
+			detail.src = './detail.svg';
+			detail.setAttribute('id', 'detailBtn');
+			detail.dataset.todoId = todo.todoId;
+			detail.classList.add('detail');
+			detail.addEventListener('click', UI.detailTodo);
+			detailBtn.appendChild(detail);
+			row.appendChild(detailBtn); 
 			todoList.appendChild(row);
 			}
 		}
@@ -156,25 +177,43 @@ class UI {
 		const todoId = editBtn.dataset.todoId;
 		Local.editTodo(todoId);
 		UI.displayTodos();
-		
 	}
 
-	// static showAlert(message, className) {
-	// 	const div = document.createElement('div');
-	// 	div.className = `alert alert-${className}`;
-	// 	div.appendChild(document.createTextNode(message));
-	// 	const container = document.querySelector('.container');
-	// 	const form = document.querySelector('#book-form');
-	// 	container.insertBefore(div, form);
-	// 	// Remove alert after 3 seconds
-	// 	setTimeout(() => document.querySelector('.alert').remove(), 3000);
-	// }
+	static detailTodo(e) {
+		const todoDetailModal = document.querySelector('.todoDetailModal');
+		const todoDetailDiv = document.querySelector('#todoDetail');
+		const detailBtn = e.target;
+		const todoId = detailBtn.dataset.todoId;
+		const todoRecord = Local.detailTodo(todoId);
+		const todoDetail = todoRecord[0];
+		
+		todoDetailDiv.innerHTML = `
+		<h3 class="detail-label">Title: <span class="detail-field">${todoDetail.title}</span>
+		<h3 class="detail-label">Description: <span class="detail-field">${todoDetail.description}</span></h3>
+		<h3 class="detail-label">Due Date: <span class="detail-field">${todoDetail.dueDate}</span></h3>
+		<h3 class="detail-label">Priority: <span class="detail-field">${todoDetail.priority}</span></h3>`;
+		const closeBtn = document.createElement('button');
+		closeBtn.classList.add('close');
+		closeBtn.innerText = 'Close';
+		closeBtn.addEventListener('click', UI.closeDetailModal);
+		todoDetailDiv.appendChild(closeBtn)
+		todoDetailModal.showModal();
+	}
+
+	static closeDetailModal() {
+		console.log(`Close btn clicked.`);
+		const todoDetailModal = document.querySelector('.todoDetailModal');
+		const todoDetail = document.querySelector('#todoDetail');
+		todoDetail.innerHTML = '';
+		todoDetailModal.close();
+	}
 
 	static clearFields() {
 		document.querySelector('#title').value = '';
 		document.querySelector('#description').value = '';
 		document.querySelector('#dueDate').value = '';
 	}
+	
 }
 
 export default UI;
